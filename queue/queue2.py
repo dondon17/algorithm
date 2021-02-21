@@ -1,26 +1,30 @@
-n = int(input())
-q = list()
-for i in range(n):
-    cmd = input()
-    if 'push' in cmd:
-        q.append(cmd[-1])
-        print(q[-1])
+import sys
+from collections import deque
 
-    elif cmd=='pop':
-        if len(q)==0: print(-1)
-        else: print(q.pop())
+n = int(sys.stdin.readline())
+queue = deque()
 
-    elif cmd=='size':
-        print(len(q))
+for _ in range(n):
+    cmd = sys.stdin.readline().split()
 
-    elif cmd=='empty':
-        if len(q)==0: print(1)
-        else: print(0)
+    if cmd[0] == "push":
+        queue.append(cmd[1])
 
-    elif cmd=='front':
-        if len(q) == 0: print(-1)
-        else: print(q[0])
+    elif cmd[0] == "pop":
+        if not queue: print("-1")
+        else: print(queue.popleft())
 
-    elif cmd=='back':
-        if len(q) == 0: print(-1)
-        else: print(q[-1])
+    elif cmd[0] == "front":
+        if not queue: print(-1)
+        else: print(queue[0])
+
+    elif cmd[0] == "back":
+        if not queue: print(-1)
+        else: print(queue[-1])
+        
+    elif cmd[0] == "size":
+        print(len(queue))
+
+    elif cmd[0] == "empty":
+        if not queue: print("1")
+        else: print("0")
