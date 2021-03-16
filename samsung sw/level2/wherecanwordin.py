@@ -1,3 +1,4 @@
+# 이걸 왜 못푸냐 빙신아
 t = int(input())
 
 for i in range(1, t+1):
@@ -5,26 +6,17 @@ for i in range(1, t+1):
     n, k = map(int, input().split())
     pan = []
 
+    # 각 테스트케이스의 판 생성
     for j in range(n):
         pan.append(list(map(int, input().split())))
 
-    # 가로 탐색
-    for a in range(n):
-        stackw = []
-        stackh = []
-        flag = 0
+    for rdx in range(n-k):
+        for cdx in range(n-k):
 
-        for b in range(n):
-            if pan[a][b] == 1:
-                stackw.append((a,b))
+            if pan[rdx][cdx] == 1
 
-            if pan[b][a] == 1:
-                stackh.append((b,a))
+    for rdx in range(n-k):
+        for cdx in range(n-k):
 
-            else: 
-                flag = 1
-                continue
-
-        if len(stackh) == k: answer+=1
-        if len(stackw) == k: answer+=1
+    
     print("#{} {}".format(i, answer))
