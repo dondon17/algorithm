@@ -1,15 +1,9 @@
 # 이걸 왜 못푸냐 빙신아
+
 def solution(scores):
-    tmp = [0]*101
-    for s in scores:
-        tmp[s] += 1
-
-    _max = max(tmp)
-    for i in range(100, -1, -1):
-        if _max == tmp[i]: 
-            return i
-
-    return -1            
+    score_count = Counter(scores)
+    answer = sorted(score_count, key=score_count.get)[-2]
+    return answer        
 
 t = int(input())
 for testcase in range(1, t+1):
