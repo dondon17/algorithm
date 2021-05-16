@@ -24,3 +24,4 @@ for i in range(len(arr)):
     # arr[minIdx] = temp
     arr[i], arr[minIdx] = arr[minIdx], arr[i]
     print("#{}. {}".format(i+1, arr))
+
