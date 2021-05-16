@@ -6,7 +6,7 @@ for _ in range(n):
     cost.append(list(map(int, input().split())))
 
 for _ in range(n):
-    total = 0
+    total = 
     for r in range(n):
         for c in range(n):
             if c == r:
