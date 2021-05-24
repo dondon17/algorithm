@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 n = int(input())
 k = int(input())
 arr = []
@@ -8,3 +9,13 @@ for i in range(n):
 
 arr.sort()
 print(arr[k])
+=======
+from types import ClassMethodDescriptorType
+import sys
+put = sys.stdin.readline
+
+n = int(put().strip())
+k = int(put().strip())
+
+fo
+>>>>>>> dondon
