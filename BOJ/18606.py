@@ -11,4 +11,5 @@ for _ in range(t):
         cnt = 0
         i, j = map(int, r().split())
         frame[i][j] = 0
+        
 
